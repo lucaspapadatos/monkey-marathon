@@ -1,4 +1,4 @@
-# Monkey Marathon
+![Banner](https://github.com/lucaspapadatos/monkey-marathon/blob/main/readme%20images/226banner.png)
 PLAY HERE: https://creative.caslab.queensu.ca/~GDP9/
 :-
 GAMEPLAY: https://www.youtube.com/watch?v=x4vsoj9cuk4
@@ -14,14 +14,22 @@ In terms of playtesting, the developers have been constantly playtesting through
 ## Gameplay Overview
 “Monkey Marathon” is best described as a top-down shooter with infinite level generation and progression upgrades. Our game has no specific target audience and should be playable for everyone. In this game, you will play as a monkey who is trying to escape a laboratory where the monkey has been experimented on. Starting from the bottom floor of the laboratory, the monkey’s goal is to reach the roof to escape.  However, in the actual gameplay, there are infinite floors the player can traverse and never reach the roof. Regardless, the player’s goal is to run as far as possible while having to fight or sneak past guards trying to stop them. Throughout their play-through, the player will earn gold from collecting it throughout the map, as well as earning it based on the distance the player has traveled in a “run”. When the player dies, they will have the option of using this gold to purchase upgrades from the store to help them progress further on their next run. The stronger the player gets with upgrades purchased, the farther they will be able to run, and they will encounter stronger and greater numbers of guards. When the player reaches the staircase going up to the next floor, this will act as a checkpoint, so the player will now respawn on this new floor when they die.
 
+![capture1](https://github.com/lucaspapadatos/monkey-marathon/blob/main/readme%20images/capture1.PNG)
+
 ## Core Design Features
 In this game, you will play as a monkey. Players will move their character using standard WASD movement controls. By default, they will be sprinting but players have the option to hold the shift key to sneak instead, which will prevent the player from making noise while moving, which the guards can hear. You can also aim and shoot by pointing and clicking the mouse. Players can toggle through their weapons by looking at the hotbar and pressing the number keys for the appropriate weapons. The monkey will have a health bar above its sprite. When a player is hit by an enemy, they will have damage inflicted on their health. If their health bar reaches zero, their run is over.
 
 Random map generation is one of our novel features. Once you begin playing our game, a map is randomly generated using a series of hallway blocks. These blocks are all of the same sizes and each has openings in two directions.
 
+![capture2](https://github.com/lucaspapadatos/monkey-marathon/blob/main/readme%20images/capture2.PNG)
+
 The player spawns at the entrance of the floor, at the bottom of the map to reach the exit at the top. Each tile that is placed during map generation has a chance of spawning gold and/or a guard. Every time a player reaches the end of the floor, a new map is generated with higher chances of spawning guards, and with more difficult guards. Having these infinite randomly generated maps allows for a unique experience for the player every time they play.
 
+![capture3](https://github.com/lucaspapadatos/monkey-marathon/blob/main/readme%20images/capture3.PNG)
+
 The main obstacle in your way is guards. There are three different types of guards. The first is the white guard who only has a melee attack but moves faster than the rest of the guards. Next, there is the blue guard, who has a ranged pistol attack. Finally, there is the green guard, who has more health than the blue guard and carries an assault rifle, although they may move slower, depending on balance testing. 
+
+![capture4](https://github.com/lucaspapadatos/monkey-marathon/blob/main/readme%20images/capture4.PNG)
 
 A guard can exist on the map in three different states. Each guard has a cone of vision in front of them and a hearing radius around them that affects their states. When spawned, they are in a patrol state in which they will either move back and forth between two different tiles on the map or stay stationary at one point. If the player ever enters the guard's cone of vision, they will enter the pursuit state in which they will either chase the monkey or stop and attack it if the player is within range. If the guard loses sight of the monkey, they will enter an investigation state. If the guard hears something (the player running, shooting, or the slingshot weapon), they will also enter an investigation state. In this investigation state, they will travel to the last point they saw the monkey, or the position they heard the sound, check the area, and if they find nothing they will go back to their patrol state.
 
@@ -29,11 +37,15 @@ Throughout your playthrough, you will earn gold by picking it up off the ground 
 
 Every time the player dies or launches the game, they will enter the store. Here, they can spend gold to increase their stats, unlock new weapons and upgrade their weapons. The player stats that can be upgraded are: health, sprint speed, and sneak speed. The prices will start pretty low but gradually increase as you buy upgrades. The weapons available for purchase are: a pistol, slingshot, shotgun, and assault rifle. For each weapon, the player can upgrade the ammo and weapon damage. The player can also buy a silencer exclusive to the pistol.
 
+![capture5](https://github.com/lucaspapadatos/monkey-marathon/blob/main/readme%20images/capture5.PNG)
+
 Each run, you will start with a certain amount of ammo for each gun you own. After you run out of ammo for a specific gun, you won’t be able to use it anymore for the rest of the run. If you have a silencer for the pistol, gunshots cannot be heard even within a guard's hearing radius.
 
 There are currently four weapons in the game. First, there is the pistol, the only weapon you start with, it shoots at a low rate and does minimal damage. Next, there is the slingshot, this weapon is very different from the others as instead of shooting it at guards, you shoot it at walls to create a sound which will attract guards to that location to investigate, clearing a way for the player to sneak past.. Additionally, there is the shotgun which shoots multiple bullets at once, dealing massive damage to enemies, however it is only good at short range, as bullets despawn after a fixed distance Lastly, there is an assault rifle that inflicts more damage than a pistol while shooting at a faster rate.
 
 In this game, you will have the option of playing with two different play styles depending on the situation and preference: stealthy or loud and proud. For instance, if you want to play stealthy, you can focus on purchasing upgrades like the slingshot, pistol with a silencer, and sneak speed. On the other hand, if you wish to play aggressively and shoot your way out, you can invest your gold in increasing health, ammo, damage, and big guns. Players can freely switch between these playstyles, but the player’s previous upgrades might not be relevant to the new playstyle. 
+
+![capture6](https://github.com/lucaspapadatos/monkey-marathon/blob/main/readme%20images/capture6.PNG)
 
 # Instructions
 We have added a button in the menu screen called “How To Play” which provides the player with instructions on how to play the game. Please look there for detailed instructions regarding our game. We have also decided to leave in the following developer commands in-order for the grader to reach higher levels of the game a lot faster than in a normal playthrough:
