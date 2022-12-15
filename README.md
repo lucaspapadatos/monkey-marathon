@@ -47,7 +47,7 @@ In this game, you will have the option of playing with two different play styles
 
 ![capture6](https://github.com/lucaspapadatos/monkey-marathon/blob/main/readme%20images/capture6.PNG)
 
-# Instructions
+## Instructions
 We have added a button in the menu screen called “How To Play” which provides the player with instructions on how to play the game. Please look there for detailed instructions regarding our game. We have also decided to leave in the following developer commands in-order for the grader to reach higher levels of the game a lot faster than in a normal playthrough:
 - 1-4: switch to pistol, slingshot, shotgun, and AR (assuming the weapon has been purchased in the store)
 - Numpad 0-2: switch floor level to 0, 7, and 15 respectively. Note that the change will only take effect on the next generated map.
