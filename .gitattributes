@@ -1,1 +1,10 @@
+*.cs linguist-detectable=true
+*.cs linguist-language=C#
 
+*.dll linguist-vendored
+*.a linguist-vendored
+*.so linguist-vendored
+*.bin linguist-vendored
+Build/ linguist-vendored
+Library/ linguist-vendored
+Temp/ linguist-vendored
