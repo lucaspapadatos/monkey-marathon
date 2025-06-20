@@ -8,3 +8,7 @@
 Build/ linguist-vendored
 Library/ linguist-vendored
 Temp/ linguist-vendored
+
+*.cpp linguist-vendored
+*.c linguist-vendored
+*.h linguist-vendored
